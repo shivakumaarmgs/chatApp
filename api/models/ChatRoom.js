@@ -11,7 +11,8 @@ module.exports = {
 
     roomName: {
       type: 'string',
-      required: true
+      required: true,
+      unique: true
     }
 
   }

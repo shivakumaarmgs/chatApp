@@ -5,8 +5,13 @@
     </div>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
+      <% if(!req.user) { %>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+    <% } else { %>
+      <li><a href=/user/<%= req.user.id %>>Profile</li>
+      <li><a href="/logout">Logut</a></li>
+    <% } %>
     </ul>
   </div>
 </nav>
