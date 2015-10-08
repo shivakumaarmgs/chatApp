@@ -3,8 +3,8 @@
     <center>
       <h1>@ Connect</h1>
     </center>
-    <form action='/chatroom/create' method='post' class="form-group">
-      <div class="form-group col-lg-6 col-lg-offset-3">
+    <div class="row">
+      <form action='/chatroom/create' method='post' class="form-group col-lg-6 col-lg-offset-3">
         <div class="form-group col-lg-12">
           <input class="form-control" type="text" name="roomName" placeholder="Type in a room name"></input>
         </div>
@@ -14,7 +14,7 @@
         <div class="form-group col-lg-4">
           <input class="btn btn-primary btn-md" type="submit" value="Join Room" onclick=joinRoom(event)></input>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </div>
