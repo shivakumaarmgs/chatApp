@@ -8,14 +8,7 @@
 module.exports = {
 
   index: function(req, res) {
-    if(req.session.flash) {
-      console.log('Session flash not empty');
-      console.log(req.session.flash);
-      res.locals.flash = _.clone(req.session.flash);
-    } else {
-      console.log('Session flash empty');
-      res.locals.flash = false;
-    }
+    res.locals.flash = _.clone(req.session.flash);
     req.session.flash = {};
     res.view();
   }
