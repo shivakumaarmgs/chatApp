@@ -6,6 +6,11 @@ var User = {
     username  : { type: 'string', unique: true },
     email     : { type: 'email',  unique: true },
     passports : { collection: 'Passport', via: 'user' }
+  },
+
+  messages: {
+    collection: 'message',
+    via: 'sender'
   }
 };
 

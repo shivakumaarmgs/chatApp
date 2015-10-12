@@ -16,6 +16,11 @@ module.exports = {
     chatroom: {
       model: 'chatroom',
       required: true
+    },
+
+    sender: {
+      model: 'user',
+      required: true
     }
   }
 };

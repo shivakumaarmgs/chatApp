@@ -2,10 +2,12 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <div class="panel-title">Chat Room : 
-        <span id="chatRoomInfo" data-id="<%- chatRoom.id %>"><%- chatRoom.roomName %></span>
+        <span id="chatRoomInfo" data-user-id="<%= user.id %>" data-chatroom-id="<%- chatRoom.id %>">
+          <%- chatRoom.roomName %>
+      </span>
       </div>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" id="chatWindow">
       <!-- Chat messages starts-->
       <ul class="chat">
       </ul>

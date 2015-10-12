@@ -56,7 +56,7 @@ module.exports.policies = {
   '*': ['passport', 'flashMessage'],
 
   ChatRoomController: {
-    '*': ['sessionAuth']
+    '*': ['passport', 'sessionAuth']
   }
 
 };

@@ -39,7 +39,6 @@ module.exports = {
 
   findOne: function(req, res) {
     var params = req.params.all();
-    console.log(params);
     ChatRoom.findOne(params).exec(function (err, chatRoom) {
 
       // If error server 500
