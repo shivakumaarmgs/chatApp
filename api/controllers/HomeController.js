@@ -8,8 +8,6 @@
 module.exports = {
 
   index: function(req, res) {
-    res.locals.flash = _.clone(req.session.flash);
-    req.session.flash = {};
     res.view();
   }
 

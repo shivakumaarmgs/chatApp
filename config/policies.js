@@ -48,4 +48,15 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
+
+  //'auth': {
+    //'*': ['passport', 'flashMessage']
+  //},
+
+  '*': ['passport', 'flashMessage'],
+
+  ChatRoomController: {
+    '*': ['sessionAuth']
+  }
+
 };

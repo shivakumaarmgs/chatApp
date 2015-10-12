@@ -1,7 +1,17 @@
 <% if (errors) {%>
   <% errors.forEach(function (error) { %>
-    <%= __(error) %>
+  <%= __(error) %>
   <% }) %>
+<% } %>
+
+<% if(flash && flash.err) { %>
+  <div class="alert alert-danger">
+    <ul class="flash-message">
+      <% Object.keys(flash.err).forEach(function (error) { %>
+        <li><%= JSON.stringify(flash.err[error]) %></li>
+    <% }) %>
+    </ul>
+  </div>
 <% } %>
 
 <form role="form" action="/auth/local" method="post">
@@ -13,7 +23,7 @@
 <% if (Object.keys(providers).length) {%>
   <h4>You can also use one of these...</h4>
 
-  <% Object.keys(providers).forEach(function (key) { %>
-    <a href="/auth/<%= providers[key].slug %>" role="button"><%= providers[key].name %></a>
+<% Object.keys(providers).forEach(function (key) { %>
+  <a href="/auth/<%= providers[key].slug %>" role="button"><%= providers[key].name %></a>
   <% }) %>
 <% } %>

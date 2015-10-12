@@ -23,9 +23,6 @@ module.exports = {
         }
       }
 
-      // Clear req.session.flash if no error
-      req.session.flash = {};
-
       // 201 if created successfully
       res.status(201);
       ChatRoom.publishCreate(chatRoom);
@@ -34,7 +31,7 @@ module.exports = {
       if(req.wantsJSON) {
         res.json(chatRoom);
       } else {
-        res.redirect('/chatroom/'+chatRoom.id);
+        res.redirect('/chatroom/'+chatRoom.roomName);
       }
 
     })

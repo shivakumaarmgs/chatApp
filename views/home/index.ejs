@@ -6,13 +6,13 @@
     <div class="row">
       <form action='/chatroom/create' method='post' class="form-group col-lg-6 col-lg-offset-3">
         <% if(flash && flash.err) { %>
-          <p>
-          <ul class="alert alert-danger">
+          <div class="alert alert-danger">
+          <ul class="flash-message">
             <% Object.keys(flash.err).forEach(function (error) { %>
               <li><%= JSON.stringify(flash.err[error]) %></li>
           <% }) %>
           </ul>
-          </p>
+          </div>
         <% } %>
         <div class="form-group col-lg-12" id="roomNameDiv">
           <input class="form-control" type="text" name="roomName" placeholder="Type in a room name" id="roomName"></input>
